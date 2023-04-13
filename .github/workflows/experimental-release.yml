@@ -1,4 +1,5 @@
-name: Build experimental release
+name: experimental-release
+
 on:
   workflow_dispatch:
     inputs:
