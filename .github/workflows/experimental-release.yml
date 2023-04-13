@@ -1,8 +1,5 @@
 name: Build experimental release
 on:
-  push:
-    branches:
-      - '**'
   workflow_dispatch:
     inputs:
       opensearch_dashboards_version:
