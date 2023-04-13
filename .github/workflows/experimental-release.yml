@@ -56,6 +56,8 @@ jobs:
           git push origin ${{ env.RELEASE_TAG }}
       - name: Release
         id: release_step
+        run: |
+          cd OpenSearch-Dashboards/plugins/ml-commons-dashboards
         uses: softprops/action-gh-release@v1
         with:
           files: build/*.zip
