@@ -56,10 +56,9 @@ jobs:
           git push origin ${{ env.RELEASE_TAG }}
       - name: Release
         id: release_step
-        run: |
-          cd OpenSearch-Dashboards/plugins/ml-commons-dashboards
         uses: softprops/action-gh-release@v1
         with:
+          path: OpenSearch-Dashboards/plugins/ml-commons-dashboards
           files: build/*.zip
           tag_name: ${{ env.RELEASE_TAG }}
       - name: Update Artifact URL
